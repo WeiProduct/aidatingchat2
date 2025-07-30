@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://aidatingchat.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
