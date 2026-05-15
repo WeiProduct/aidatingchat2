@@ -36,8 +36,7 @@ aidatingchat2/
 - **功能展示** - 5种智能回复风格展示
 - **使用方法** - 简单三步使用指南
 - **应用截图** - 精美的界面预览
-- **价格方案** - 清晰的付费模式
-- **下载链接** - App Store和Google Play下载
+- **下载链接** - App Store 下载与产品支持
 
 ### 交互功能
 - **语言切换** - 中英文实时切换
@@ -57,7 +56,6 @@ aidatingchat2/
 - **CSS3** - 现代样式和动画
 - **Vanilla JavaScript** - 原生JS实现
 - **响应式设计** - CSS Grid 和 Flexbox
-- **Web字体** - Google Fonts (Inter)
 
 ## 📱 响应式支持
 
@@ -136,7 +134,6 @@ vercel --prod
 - `screenshot-3.png` - 界面截图3
 - `screenshot-4.png` - 界面截图4
 - `app-store.png` - App Store下载按钮
-- `google-play.png` - Google Play下载按钮
 - `favicon.png` - 网站图标
 
 ### 修改联系信息
@@ -170,7 +167,7 @@ vercel --prod
 
 ## 📝 更新日志
 
-### v1.0.0 (2024-07-29)
+### v1.0.0 (2026-05-15)
 - 初始版本发布
 - 完整的产品网站功能
 - 响应式设计实现
@@ -191,10 +188,9 @@ vercel --prod
 
 ## 📞 联系我们
 
-- 邮箱: support@aidatingchat.com
-- 电话: 400-123-4567
-- 网站: https://aidatingchat.com
+- 邮箱: 1597498880weiproduct@gmail.com
+- 网站: https://weiproduct.github.io/aidatingchat2/
 
 ---
 
-© 2024 AI约会助手. All rights reserved.
+© 2026 WeiProduct. All rights reserved.

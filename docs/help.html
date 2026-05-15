@@ -91,7 +91,7 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="../assets/images/logo.png" alt="AI约会助手" class="logo-img">
+                    <span class="logo-mark" aria-hidden="true">AI</span>
                     <span class="logo-text">AI约会助手</span>
                 </div>
                 <ul class="nav-menu">
@@ -103,7 +103,7 @@
 
     <div class="help-content">
         <h1>帮助中心</h1>
-        
+
         <div class="help-section">
             <h2>快速开始</h2>
             <p>欢迎使用AI约会助手！以下是一些常见问题的解答，帮助您快速上手。</p>
@@ -111,9 +111,9 @@
 
         <div class="help-section">
             <h2>常见问题</h2>
-            
+
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>如何开始使用AI约会助手？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>有哪些回复风格可以选择？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -145,7 +145,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>免费版和付费版有什么区别？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -169,7 +169,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>我的对话记录是否安全？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -185,7 +185,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>如何取消订阅？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -201,7 +201,7 @@
                     </ol>
                     <p><strong>Android用户：</strong></p>
                     <ol>
-                        <li>打开Google Play商店</li>
+                        <li>打开 App Store</li>
                         <li>点击菜单 > 订阅</li>
                         <li>找到"AI约会助手"</li>
                         <li>点击"取消订阅"</li>
@@ -210,7 +210,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>应用支持哪些语言？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -225,7 +225,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>AI生成的回复不合适怎么办？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -242,7 +242,7 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
+                <div class="faq-question">
                     <span>应用无法正常工作怎么办？</span>
                     <span class="faq-toggle">▼</span>
                 </div>
@@ -273,17 +273,17 @@
         <div class="contact-box">
             <h3>还有其他问题？</h3>
             <p>我们的客服团队随时为您提供帮助</p>
-            
+
             <div class="contact-info">
                 <div class="contact-item">
                     <h4>邮件支持</h4>
-                    <p>support@aidatingchat.com</p>
+                    <p>1597498880weiproduct@gmail.com</p>
                     <small>24小时内回复</small>
                 </div>
                 <div class="contact-item">
-                    <h4>电话支持</h4>
-                    <p>400-123-4567</p>
-                    <small>工作日 9:00-18:00</small>
+                    <h4>公司网站</h4>
+                    <p>weiproduct.com</p>
+                    <small>产品与公司信息</small>
                 </div>
                 <div class="contact-item">
                     <h4>在线客服</h4>
@@ -299,35 +299,50 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="../assets/images/logo.png" alt="AI约会助手" class="footer-logo-img">
+                        <span class="logo-mark" aria-hidden="true">AI</span>
                         <span class="footer-logo-text">AI约会助手</span>
                     </div>
                     <p class="footer-description">让AI帮您掌握约会对话技巧，成为聊天达人</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AI约会助手. 保留所有权利.</p>
+                <p>&copy; <span id="currentYear">2026</span> WeiProduct. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer').forEach(item => {
-                if (item !== answer) {
+        document.querySelectorAll('.faq-question').forEach((question) => {
+            question.setAttribute('role', 'button');
+            question.setAttribute('tabindex', '0');
+            question.setAttribute('aria-expanded', 'false');
+
+            const toggle = () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-toggle');
+                const isOpening = !answer.classList.contains('active');
+
+                document.querySelectorAll('.faq-answer').forEach((item) => {
                     item.classList.remove('active');
-                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                    item.previousElementSibling?.setAttribute('aria-expanded', 'false');
+                    item.previousElementSibling?.querySelector('.faq-toggle')?.classList.remove('active');
+                });
+
+                if (isOpening) {
+                    answer.classList.add('active');
+                    icon?.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            };
+
+            question.addEventListener('click', toggle);
+            question.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggle();
                 }
             });
-            
-            // Toggle current FAQ
-            answer.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
+        });
     </script>
 </body>
 </html>
