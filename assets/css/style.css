@@ -121,15 +121,15 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* ---------- Hero interactive chat demo ---------- */
 .hero-visual { position: relative; display: flex; justify-content: center; }
-.device { position: relative; width: 320px; max-width: 82vw; background: var(--card); border: 1px solid var(--border-color); border-radius: 42px; padding: 16px 14px 18px; box-shadow: var(--shadow-lg); }
+.device { position: relative; width: 320px; max-width: 82vw; aspect-ratio: 9 / 19.5; display: flex; flex-direction: column; overflow: hidden; background: var(--card); border: 1px solid var(--border-color); border-radius: 42px; padding: 16px 14px 18px; box-shadow: var(--shadow-lg); }
 .device-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 90px; height: 22px; background: var(--text-primary); opacity: .9; border-radius: 999px; }
 :root[data-theme="dark"] .device-notch { background: #000; opacity: 1; }
-.chat { margin-top: 30px; }
+.chat { margin-top: 30px; flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .chat-head { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px 14px; border-bottom: 1px solid var(--border-color); }
 .chat-title { font-weight: 800; font-size: 17px; }
 .chat-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--success-color); }
 .chat-live .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success-color); box-shadow: 0 0 0 0 rgba(52,199,89,.5); animation: pulse 2s infinite; }
-.chat-body { padding: 16px 6px 6px; min-height: 190px; }
+.chat-body { padding: 16px 6px 6px; flex: 1; min-height: 0; }
 .msg { display: flex; flex-direction: column; margin-bottom: 14px; }
 .msg-in { align-items: flex-start; }
 .msg-out { align-items: flex-end; }
